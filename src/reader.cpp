@@ -12,23 +12,25 @@ int main(void)
     std::ofstream fio;
     std::ifstream fii;
     std::string line, path;
+    int i = 1;
     
-    fii.open("path", ios::in);
+    fii.open(".path", ios::in);
     getline(fii, path);
+    fii.close();
 
-    freopen("log", "w", stdout);
+    freopen(".log", "w", stdout);
     cout<<"works"<<endl;
     cout<<"path is: "<<path<<endl;
     
     fio.open(path+"tests\\out", ios::trunc | ios::out);
-    fio<<"testfio"<<endl;
-    fio.close();
+    fio<<"testfio\n"<<endl;
 
     fii.open(path+"tests\\test.wav", ios::in);
     while(fii) 
     {
+        cout<<"line "<<i++<<endl;
         getline(fii, line);
-        fio<<line<< endl;
+        fio<<line<<endl;
     }
 
     fio.close();
