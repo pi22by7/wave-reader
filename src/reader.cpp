@@ -73,7 +73,7 @@ int main(void)
         cout<<"Unable to open file.";
     else
     {
-        size_t bytesRead = (fii.read((char*)&wavHeader, sizeof(WAV_FHEAD))).get();
+        size_t bytesRead = (fii.read((char*)&wavHeader, sizeof(wav_head))).get();
 
         cout<<"Header Read. Contains "<<bytesRead<<" bytes.\n"<<endl;
         fii.seekg(0, ios::beg);
