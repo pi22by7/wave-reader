@@ -57,6 +57,10 @@ public:
 
 int main(void)
 {
-    read wave();
+    std::ofstream fio;
+    std::ifstream fii;
+    
 
+    
+    read wave();
 }

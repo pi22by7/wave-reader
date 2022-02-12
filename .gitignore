@@ -1,1 +1,6 @@
-path
+tests/.out
+tests/test.wav
+*.exe
+.log
+.path
+copy.cpp
